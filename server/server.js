@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -6,10 +8,21 @@ const CartModel = require("./models/cartList");
 const OrderModel = require("./models/orderList");
 
 var app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:3000',
+  credentials: true
+}));
 app.use(express.json());
 
-mongoose.connect("mongodb://127.0.0.1:27017/srilankan_restaurant");
+mongoose.connect(process.env.MONGO_URI)
+.then(() => {
+  app.listen(process.env.PORT, () => {
+  console.log("Server running on " + process.env.PORT);
+})
+})
+.catch((error) => {
+  console.log(error);
+});
 
 mongoose.connection.on("error", (error) => {
   console.error("MongoDB connection error: ", error);
@@ -64,8 +77,4 @@ app.delete("/deleteCartItem/:id", (req, res) => {
   CartModel.findByIdAndDelete({ _id: id })
   .then((cartItem) => res.json(cartItem))
   .catch((err) => res.json(err));
-})
-
-app.listen(3001, () => {
-  console.log("Server running on 3001");
 })

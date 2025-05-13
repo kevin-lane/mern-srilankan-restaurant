@@ -5,7 +5,7 @@ import './menuCard.css';
 function MenuCard(props) {
   function addItem(){
     alert(props.name + " has been added to the cart ");
-    axios.post('http://127.0.0.1:3001/addToCart', { name: props.name, price: props.price })
+    axios.post('http://localhost:4000/addToCart', { name: props.name, price: props.price })
       .then(res => {
         console.log(res);
         window.location.reload();

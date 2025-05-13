@@ -6,6 +6,6 @@ const MenuSchema = new mongoose.Schema({
   image: String
 });
 
-const MenuList = mongoose.model("menu", MenuSchema);
+const MenuList = mongoose.model("menu", MenuSchema, "menus");
 
 module.exports = MenuList;

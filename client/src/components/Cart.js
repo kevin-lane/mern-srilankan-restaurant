@@ -15,7 +15,7 @@ function Cart() {
   const [email, setEmail] = useState("");
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:3001/getCart')
+    axios.get('http://localhost:4000/getCart')
     .then(result => {
       console.log(result.data);
       setCartItems(result.data);
@@ -30,7 +30,7 @@ function Cart() {
     setOrderedItems(items);
 
     //Post order to orders collection
-    axios.post('http://127.0.0.1:3001/addToOrders',
+    axios.post('http://localhost:4000/addToOrders',
       {
         foodOrders: cartItems.map(orders => orders.name),
         totalPrice: totalPrice,
@@ -47,7 +47,7 @@ function Cart() {
       })
       .catch(err => console.log(err))
 
-      axios.delete('http://127.0.0.1:3001/deleteCart')
+      axios.delete('http://localhost:4000/deleteCart')
       .then(res => console.log(res))
       .catch(err => console.log(err));
 
@@ -55,7 +55,7 @@ function Cart() {
   }
 
   function deleteItem(id){
-    axios.delete('http://127.0.0.1:3001/deleteCartItem/' + id)
+    axios.delete('http://localhost:4000/deleteCartItem/' + id)
     .then(result => {
       console.log(result);
       window.location.reload();

@@ -12,7 +12,7 @@ function App() {
 
   //To count the amount of items in Cart and display on cart button
     useEffect(() => {
-      axios.get('http://127.0.0.1:3001/getCart')
+      axios.get('http://localhost:4000/getCart')
       .then(result => {
         setCartCount(result.data.length)
       })
