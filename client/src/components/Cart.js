@@ -30,7 +30,7 @@ function Cart() {
     setOrderedItems(items);
 
     //Post order to orders collection
-    axios.post('http://localhost:4000/addToOrders',
+    axios.post(`${process.env.REACT_APP_BACKEND_URL}/addToOrders`,
       {
         foodOrders: cartItems.map(orders => orders.name),
         totalPrice: totalPrice,
@@ -47,7 +47,7 @@ function Cart() {
       })
       .catch(err => console.log(err))
 
-      axios.delete('http://localhost:4000/deleteCart')
+      axios.delete(`${process.env.REACT_APP_BACKEND_URL}/deleteCart`)
       .then(res => console.log(res))
       .catch(err => console.log(err));
 
@@ -55,7 +55,7 @@ function Cart() {
   }
 
   function deleteItem(id){
-    axios.delete('http://localhost:4000/deleteCartItem/' + id)
+    axios.delete(`${process.env.REACT_APP_BACKEND_URL}/deleteCartItem/` + id)
     .then(result => {
       console.log(result);
       window.location.reload();
