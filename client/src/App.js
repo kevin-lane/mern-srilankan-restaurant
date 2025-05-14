@@ -11,6 +11,7 @@ function App() {
   const [cartCount, setCartCount] = useState(0);
 
   //To count the amount of items in Cart and display on cart button
+  //Add new URL
     useEffect(() => {
       axios.get(`${process.env.REACT_APP_BACKEND_URL}/getMenu`)
       .then(result => {
