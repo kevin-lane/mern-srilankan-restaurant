@@ -8,6 +8,9 @@ const CartModel = require("./models/cartList");
 const OrderModel = require("./models/orderList");
 
 const PORT = process.env.PORT || 4000;
+console.log("🟢 Starting server.js...");
+console.log("Using port:", process.env.PORT);
+console.log("Using MONGO_URI:", !!process.env.MONGO_URI);
 
 var app = express();
 app.use(cors({
