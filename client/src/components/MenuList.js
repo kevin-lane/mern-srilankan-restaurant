@@ -6,7 +6,7 @@ import './menuList.css';
 function MenuList() {
   const [menuItems, setMenuItems] = useState([]);
   useEffect(() => {
-    axios.get('http://localhost:4000/getMenu')
+    axios.get(`${process.env.REACT_APP_BACKEND_URL}/getMenu`)
     .then(result => {
       setMenuItems(result.data);
     })

@@ -15,7 +15,7 @@ function Cart() {
   const [email, setEmail] = useState("");
 
   useEffect(() => {
-    axios.get('http://localhost:4000/getCart')
+    axios.get(`${process.env.REACT_APP_BACKEND_URL}/getCart`)
     .then(result => {
       console.log(result.data);
       setCartItems(result.data);
