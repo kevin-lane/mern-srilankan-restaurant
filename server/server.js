@@ -7,7 +7,7 @@ const MenuModel = require("./models/menuList");
 const CartModel = require("./models/cartList");
 const OrderModel = require("./models/orderList");
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT;
 console.log("🟢 Starting server.js...");
 console.log("Using port:", process.env.PORT);
 console.log("Using MONGO_URI:", !!process.env.MONGO_URI);
