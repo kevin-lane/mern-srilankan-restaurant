@@ -33,6 +33,10 @@ mongoose.connection.on("error", (error) => {
   console.error("MongoDB connection error: ", error);
 });
 
+app.get("/", (req, res) => {
+  res.send("🟢 Backend is running!");
+});
+
 //Get menus from database
 app.get("/getMenu", (req, res) => {
   MenuModel.find({})

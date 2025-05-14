@@ -12,7 +12,7 @@ function App() {
 
   //To count the amount of items in Cart and display on cart button
     useEffect(() => {
-      axios.get('http://localhost:4000/getCart')
+      axios.get(`${process.env.REACT_APP_BACKEND_URL}/getMenu`)
       .then(result => {
         setCartCount(result.data.length)
       })

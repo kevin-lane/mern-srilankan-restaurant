@@ -8,6 +8,8 @@ function MenuList() {
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_BACKEND_URL}/getMenu`)
     .then(result => {
+      console.log(result.data);
+
       setMenuItems(result.data);
     })
     .catch(err => console.log(err))
