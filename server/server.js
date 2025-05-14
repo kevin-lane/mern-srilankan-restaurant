@@ -7,17 +7,19 @@ const MenuModel = require("./models/menuList");
 const CartModel = require("./models/cartList");
 const OrderModel = require("./models/orderList");
 
+const PORT = process.env.PORT || 4000;
+
 var app = express();
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: ['http://localhost:3000', 'https://mern-srilankan-restaurant.vercel.app'],
   credentials: true
 }));
 app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URI)
 .then(() => {
-  app.listen(process.env.PORT, () => {
-  console.log("Server running on " + process.env.PORT);
+  app.listen(PORT, () => {
+  console.log("Server running on " + PORT);
 })
 })
 .catch((error) => {
