@@ -49,10 +49,13 @@ function Cart() {
       .catch(err => console.log(err))
 
       axios.delete(`${process.env.REACT_APP_BACKEND_URL}/deleteCart`)
-      .then(res => console.log(res))
+      .then(res => {
+        console.log(res)
+        window.location.reload();
+
+      })
       .catch(err => console.log(err));
 
-      window.location.reload();
   }
 
   function deleteItem(id){
