@@ -13,6 +13,7 @@ function Cart() {
   const [postalCity, setPostalCity] = useState("");
   const [telephoneNumber, setTelephoneNumber] = useState(0);
   const [email, setEmail] = useState("");
+  const [cartText, setCartText] = useState("Cart is empty");
 
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_BACKEND_URL}/getCart`)
@@ -28,7 +29,7 @@ function Cart() {
   function submitOrder(){
     alert("Thank you for your order")
     setOrderedItems(items);
-
+    setCartText("Thank you for your order!");
     //Post order to orders collection
     axios.post(`${process.env.REACT_APP_BACKEND_URL}/addToOrders`,
       {
@@ -51,7 +52,7 @@ function Cart() {
       .then(res => console.log(res))
       .catch(err => console.log(err));
 
-      window.location.reload();
+      // window.location.reload();
   }
 
   function deleteItem(id){
@@ -64,7 +65,7 @@ function Cart() {
   }
   return (
     <div>
-      {cartItems.length === 0 ? <p>Your cart is empty</p> :
+      {cartItems.length === 0 ? <p>{cartText}</p> :
       <>
         <p>Your cart items: </p>
         <ul id='cart-list'>
