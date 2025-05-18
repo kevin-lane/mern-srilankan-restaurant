@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import './menuCard.css';
 
 function MenuCard(props) {
+  const [cartItems, setCartItems] = useState([]);
   function addItem(){
-    const [cartItems, setCartItems] = useState([]);
     alert(props.name + " has been added to the cart ");
     console.log(cartItems)
     if(!localStorage.getItem("cart")){
@@ -12,8 +12,7 @@ function MenuCard(props) {
 
     }
     else{
-      cartItems.push({name: props.name, price: props.price});
-
+      setCartItems({name: props.name, price: props.price});
     }
     localStorage.setItem('cartName', props.name);
     localStorage.setItem('cartPrice', props.price);
