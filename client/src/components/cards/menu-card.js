@@ -1,10 +1,21 @@
 import axios from 'axios';
-import React from 'react';
+import React, { useState } from 'react';
 import './menuCard.css';
 
 function MenuCard(props) {
   function addItem(){
+    const [cartItems, setCartItems] = useState([]);
     alert(props.name + " has been added to the cart ");
+    console.log(cartItems)
+    if(!localStorage.getItem("cart")){
+      localStorage.setItem("cart", cartItems)
+      cartItems.push({name: props.name, price: props.price})
+
+    }
+    else{
+      cartItems.push({name: props.name, price: props.price})
+
+    }
     localStorage.setItem('cartName', props.name);
     localStorage.setItem('cartPrice', props.price);
     axios.post(`${process.env.REACT_APP_BACKEND_URL}/addToCart`, { name: props.name, price: props.price })
