@@ -6,7 +6,9 @@ function MenuCard(props) {
   const [cartItems, setCartItems] = useState([]);
   function addItem(){
     alert(props.name + " has been added to the cart ");
+      setCartItems({name: props.name, price: props.price});
     console.log(cartItems)
+
     if(!localStorage.getItem("cart")){
       localStorage.setItem("cart", JSON.stringify(cartItems));
 
