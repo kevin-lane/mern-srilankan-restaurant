@@ -8,19 +8,11 @@ function MenuCard(props) {
     alert(props.name + " has been added to the cart ");
     const newItem = { name: props.name, price: props.price };
     const updatedCart = [...cartItems, newItem];
-    console.log(cartItems)
-
-    // if(!localStorage.getItem("cart")){
-    //   localStorage.setItem("cart", JSON.stringify(cartItems));
-
-    // }
-    // else{
       setCartItems(updatedCart);
       localStorage.setItem("cart", JSON.stringify(updatedCart));
 
       console.log(updatedCart);
       console.log(localStorage.getItem("cart"));
-    // }
 
     // axios.post(`${process.env.REACT_APP_BACKEND_URL}/addToCart`, { name: props.name, price: props.price })
     //   .then(res => {
