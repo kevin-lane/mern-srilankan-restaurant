@@ -8,16 +8,16 @@ import XIcon from './components/icons/xIcon';
 
 function App() {
   const [cartOpen, setCartOpen] = useState(false);
-  const [cartCount, setCartCount] = useState(JSON.parse(localStorage.getItem("cart")).length);
+  const [cartCount, setCartCount] = useState(JSON.parse(localStorage.getItem("cart") || []).length);
 
   //To count the amount of items in Cart and display on cart button
   //Add new URL
-    useEffect(() => {
-      axios.get(`${process.env.REACT_APP_BACKEND_URL}/getCart`)
-      .then(result => {
-        setCartCount(result.data.length)
-      })
-    }, [])
+    // useEffect(() => {
+    //   axios.get(`${process.env.REACT_APP_BACKEND_URL}/getCart`)
+    //   .then(result => {
+    //     setCartCount(result.data.length)
+    //   })
+    // }, [])
 
   return (
     <div className="App">
