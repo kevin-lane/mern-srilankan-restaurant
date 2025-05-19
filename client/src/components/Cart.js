@@ -16,11 +16,14 @@ function Cart() {
   const [cartText, setCartText] = useState("Cart is empty");
 
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_BACKEND_URL}/getCart`)
-    .then(result => {
-      console.log(result.data);
-      setCartItems(result.data);
-    })
+    setCartItems(JSON.parse(localStorage.getItem("cart")))
+    console.log(cartItems);
+
+    // axios.get(`${process.env.REACT_APP_BACKEND_URL}/getCart`)
+    // .then(result => {
+    //   console.log(result.data);
+    //   setCartItems(result.data);
+    // })
   }, [])
 
   let totalPrice = cartItems.reduce((prev, {price}) => prev + price, 0)
