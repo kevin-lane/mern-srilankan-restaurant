@@ -25,12 +25,12 @@ function MenuCard(props) {
 
     // }
 
-    axios.post(`${process.env.REACT_APP_BACKEND_URL}/addToCart`, { name: props.name, price: props.price })
-      .then(res => {
-        console.log(res);
-        window.location.reload();
-      })
-      .catch(err => console.log(err));
+    // axios.post(`${process.env.REACT_APP_BACKEND_URL}/addToCart`, { name: props.name, price: props.price })
+    //   .then(res => {
+    //     console.log(res);
+    //     window.location.reload();
+    //   })
+    //   .catch(err => console.log(err));
   }
 
   return (
