@@ -8,7 +8,7 @@ function MenuCard(props) {
   useEffect(() => {
     const storedCart = localStorage.getItem("cart");
     if(storedCart){
-      setCartItems(JSON.parse(storedCart));
+      setCartItems(JSON.parse(storedCart) || "[]");
     }
   }, []);
 

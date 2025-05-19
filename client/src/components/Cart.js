@@ -16,7 +16,7 @@ function Cart() {
   const [cartText, setCartText] = useState("Cart is empty");
 
   useEffect(() => {
-    setCartItems(JSON.parse(localStorage.getItem("cart")))
+    setCartItems(JSON.parse(localStorage.getItem("cart") || "[]"))
     console.log(cartItems);
 
     // axios.get(`${process.env.REACT_APP_BACKEND_URL}/getCart`)
