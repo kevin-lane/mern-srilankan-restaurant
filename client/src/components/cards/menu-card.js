@@ -9,11 +9,11 @@ function MenuCard(props) {
       cartItems.push({name: props.name, price: props.price})
     console.log(cartItems)
 
-    if(!localStorage.getItem("cart")){
-      localStorage.setItem("cart", JSON.stringify(cartItems));
+    // if(!localStorage.getItem("cart")){
+    //   localStorage.setItem("cart", JSON.stringify(cartItems));
 
-    }
-    else{
+    // }
+    // else{
       setCartItems([
         ...cartItems,
         { name: props.name, price: props.price }
@@ -23,9 +23,8 @@ function MenuCard(props) {
 
       console.log(localStorage.getItem("cart"));
 
-    }
-    localStorage.setItem('cartName', props.name);
-    localStorage.setItem('cartPrice', props.price);
+    // }
+
     axios.post(`${process.env.REACT_APP_BACKEND_URL}/addToCart`, { name: props.name, price: props.price })
       .then(res => {
         console.log(res);
