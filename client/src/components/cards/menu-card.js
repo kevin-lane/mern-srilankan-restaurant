@@ -14,7 +14,12 @@ function MenuCard(props) {
 
     }
     else{
-      setCartItems({name: props.name, price: props.price});
+      setCartItems([
+        ...cartItems,
+        { name: props.name, price: props.price }
+      ]
+    );
+      localStorage
       console.log(localStorage.getItem("cart"));
 
     }
