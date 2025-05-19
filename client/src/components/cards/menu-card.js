@@ -6,7 +6,8 @@ function MenuCard(props) {
   const [cartItems, setCartItems] = useState([]);
   function addItem(){
     alert(props.name + " has been added to the cart ");
-      cartItems.push(...cartItems, {name: props.name, price: props.price})
+    const newItem = { name: props.name, price: props.price };
+    const updatedCart = [...cartItems, newItem];
     console.log(cartItems)
 
     // if(!localStorage.getItem("cart")){
@@ -14,15 +15,11 @@ function MenuCard(props) {
 
     // }
     // else{
-      setCartItems([
-        ...cartItems,
-        { name: props.name, price: props.price }
-      ]
-    );
-      localStorage.setItem("cart", JSON.stringify(cartItems));
+      setCartItems(updatedCart);
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
 
+      console.log(updatedCart);
       console.log(localStorage.getItem("cart"));
-
     // }
 
     // axios.post(`${process.env.REACT_APP_BACKEND_URL}/addToCart`, { name: props.name, price: props.price })
