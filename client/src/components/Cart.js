@@ -48,12 +48,11 @@ function Cart() {
       })
       .then(res => {
         console.log(res);
-        localStorage.clear(); //Clear cart when order submitted
-
       })
       .catch(err => console.log(err))
 
-        window.location.reload();
+      localStorage.clear(); //Clear cart when order submitted
+      window.location.reload();
 
       // axios.delete(`${process.env.REACT_APP_BACKEND_URL}/deleteCart`)
       // .then(res => {
