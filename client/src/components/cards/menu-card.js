@@ -8,11 +8,13 @@ function MenuCard(props) {
     alert(props.name + " has been added to the cart ");
     console.log(cartItems)
     if(!localStorage.getItem("cart")){
-      localStorage.setItem("cart", cartItems);
+      localStorage.setItem("cart", JSON.stringify(cartItems));
 
     }
     else{
       setCartItems({name: props.name, price: props.price});
+      console.log(localStorage.getItem("cart"));
+
     }
     localStorage.setItem('cartName', props.name);
     localStorage.setItem('cartPrice', props.price);
