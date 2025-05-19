@@ -19,7 +19,7 @@ function MenuCard(props) {
         { name: props.name, price: props.price }
       ]
     );
-      localStorage
+
       console.log(localStorage.getItem("cart"));
 
     }
