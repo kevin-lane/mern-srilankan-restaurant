@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import './cart.css';
 import TrashIcon from './icons/trashIcon';
+import OrderConfirmation from './modals/OrderConfirmation';
 
 function Cart() {
   const [cartItems, setCartItems] = useState([]);
@@ -14,6 +15,7 @@ function Cart() {
   const [telephoneNumber, setTelephoneNumber] = useState(0);
   const [email, setEmail] = useState("");
   const [cartText, setCartText] = useState("Cart is empty");
+  const [orderSubmitted, setOrderSubmitted] = useState(false);
 
   useEffect(() => {
     setCartItems(JSON.parse(localStorage.getItem("cart") || "[]"))
@@ -52,7 +54,7 @@ function Cart() {
       .catch(err => console.log(err))
 
       localStorage.clear(); //Clear cart when order submitted
-
+      setOrderSubmitted(true);
       // axios.delete(`${process.env.REACT_APP_BACKEND_URL}/deleteCart`)
       // .then(res => {
       //   console.log(res)
@@ -110,6 +112,7 @@ function Cart() {
             <input type='text' id='email' className='input-fields' name='email' onChange={e => setEmail(e.target.value)}/><br/>
           </form>
           <button id='submit-order-btn' type="submit" onClick={submitOrder}>Submit Order</button>
+          {orderSubmitted && <OrderConfirmation />}
       </>
       }
     </div>
