@@ -68,12 +68,12 @@ function Cart() {
   function deleteItem(id){
     console.log(cartItems);
 
-    axios.delete(`${process.env.REACT_APP_BACKEND_URL}/deleteCartItem/` + id)
-    .then(result => {
-      console.log(result);
-      window.location.reload();
-    })
-    .catch(err => console.log(err))
+    // axios.delete(`${process.env.REACT_APP_BACKEND_URL}/deleteCartItem/` + id)
+    // .then(result => {
+    //   console.log(result);
+    //   window.location.reload();
+    // })
+    // .catch(err => console.log(err))
   }
   return (
     <div>
