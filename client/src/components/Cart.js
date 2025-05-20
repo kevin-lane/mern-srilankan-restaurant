@@ -112,9 +112,9 @@ function Cart() {
             <input type='text' id='email' className='input-fields' name='email' onChange={e => setEmail(e.target.value)}/><br/>
           </form>
           <button id='submit-order-btn' type="submit" onClick={submitOrder}>Submit Order</button>
-          {orderSubmitted && <OrderConfirmation />}
       </>
       }
+      {orderSubmitted && <OrderConfirmation />}
     </div>
   )
 }
