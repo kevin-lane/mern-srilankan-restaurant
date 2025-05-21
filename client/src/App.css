@@ -44,11 +44,13 @@
 }
 
 #cart-btn{
-  background-color: #941E32;
-  color: yellow;
-  border: none;
-  height: 100%;
-  width: 6rem;
+    background-color: #941e32;
+    border: 1px solid white;
+    border-radius: 1rem;
+    color: #ff0;
+    height: 50%;
+    width: 6rem;
+    margin-top: 50%;
 }
 
 #address-field{
