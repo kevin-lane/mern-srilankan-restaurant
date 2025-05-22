@@ -15,7 +15,7 @@ function MenuCard(props) {
   function addItem(){
     alert(props.name + " has been added to the cart ");
 
-    const newItem = { key: props.id, name: props.name, price: props.price };
+    const newItem = { key: props._id, name: props.name, price: props.price };
     const updatedCart = [...cartItems, newItem];
 
       setCartItems(updatedCart);
