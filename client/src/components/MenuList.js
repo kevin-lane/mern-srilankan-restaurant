@@ -19,7 +19,7 @@ function MenuList() {
     <div id='menu-list'>
       {menuItems.map((item, index) => {
         return (
-          <MenuCard id={item.id} key={item.id} name={item.name} price={item.price} image={item.image} />
+          <MenuCard id={item._id} key={item._id} name={item.name} price={item.price} image={item.image} />
       )})}
     </div>
   )
