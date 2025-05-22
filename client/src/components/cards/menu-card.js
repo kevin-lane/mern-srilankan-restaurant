@@ -24,6 +24,7 @@ function MenuCard(props) {
       console.log(updatedCart);
       console.log(localStorage.getItem("cart"));
 
+      console.log("Adding item with ID:", props.id);
       window.location.reload();
     // axios.post(`${process.env.REACT_APP_BACKEND_URL}/addToCart`, { name: props.name, price: props.price })
     //   .then(res => {
