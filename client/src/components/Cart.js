@@ -30,7 +30,7 @@ function Cart() {
 
   let totalPrice = cartItems.reduce((prev, {price}) => prev + price, 0)
   let items = cartItems.map(i => i.name);
-  let sameID = cartItems.filter((c) => c._id === c.id);
+  let sameID = cartItems.filter((c) => c);
   console.log(sameID);
 
 
