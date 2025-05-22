@@ -15,7 +15,7 @@ function MenuCard(props) {
   function addItem(){
     alert(props.name + " has been added to the cart ");
 
-    const newItem = { key: props._id, name: props.name, price: props.price };
+    const newItem = { key: props.id, name: props.name, price: props.price };
     const updatedCart = [...cartItems, newItem];
 
       setCartItems(updatedCart);
@@ -24,7 +24,7 @@ function MenuCard(props) {
       console.log(updatedCart);
       console.log(localStorage.getItem("cart"));
 
-      console.log("Adding item with ID:", props._id);
+      console.log("Adding item with ID:", props.id);
       // window.location.reload();
     // axios.post(`${process.env.REACT_APP_BACKEND_URL}/addToCart`, { name: props.name, price: props.price })
     //   .then(res => {
@@ -35,7 +35,7 @@ function MenuCard(props) {
   }
 
   return (
-    <div id='menu-card' key={props._id}>
+    <div id='menu-card' key={props.id}>
         <p id='menu-name'>{props.name}</p>
         <p>{props.price}kr</p>
         <img id='menu-img' src={props.image} alt="" />
