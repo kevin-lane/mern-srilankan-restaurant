@@ -27,7 +27,7 @@ function Cart() {
             const nameCounts = {};
             const nameSet = new Set();
 
-            storedCart.forEach(item => {
+            cartItems.forEach(item => {
               nameCounts[item.name] = (nameCounts[item.name] || 0) + 1;
 
               //Remove duplicates
@@ -85,13 +85,6 @@ function Cart() {
 
       localStorage.clear(); //Clear cart when order submitted
       setOrderSubmitted(true);
-      // axios.delete(`${process.env.REACT_APP_BACKEND_URL}/deleteCart`)
-      // .then(res => {
-      //   console.log(res)
-      //   window.location.reload();
-
-      // })
-      // .catch(err => console.log(err));
 
   }
 
