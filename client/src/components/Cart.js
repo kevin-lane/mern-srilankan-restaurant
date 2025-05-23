@@ -111,7 +111,7 @@ function Cart() {
         <p>Your cart items: </p>
         <ul id='cart-list'>
           {cartItems.map((item) => {
-            console.log(item);
+            // console.log(item);
 
             return (
             <li className='cart-list-item'>
