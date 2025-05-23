@@ -29,7 +29,6 @@ function Cart() {
       nameSet.add(cartItem.name);
       setUniqueCartItems(prevItem => [...prevItem, cartItem]);
     }
-    console.log(nameSet);
 
   });
 
@@ -44,6 +43,7 @@ function Cart() {
   let items = cartItems.map(i => i.name);
   console.log(cartItems);
     console.log("Cart items " + uniqueCartItems);
+    console.log(nameSet);
 
   console.log(cartItems.includes(item => item.name));
   // cartItems.forEach(cartItem => {
