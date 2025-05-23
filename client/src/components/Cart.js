@@ -29,6 +29,8 @@ function Cart() {
       nameSet.add(cartItem.name);
       setUniqueCartItems(prevItem => [...prevItem, cartItem]);
     }
+    console.log(uniqueCartItems);
+
   });
 
     // axios.get(`${process.env.REACT_APP_BACKEND_URL}/getCart`)
