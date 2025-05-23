@@ -6,6 +6,7 @@ import OrderConfirmation from './modals/OrderConfirmation';
 
 function Cart() {
   const [cartItems, setCartItems] = useState([]);
+  const [uniqueCartItems, setUniqueCartItems] = useState([]);
   const [orderedItems, setOrderedItems] = useState([]);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -16,6 +17,7 @@ function Cart() {
   const [email, setEmail] = useState("");
   const [cartText, setCartText] = useState("Cart is empty");
   const [orderSubmitted, setOrderSubmitted] = useState(false);
+  const nameSet = new Set();
 
   useEffect(() => {
     setCartItems(JSON.parse(localStorage.getItem("cart") || "[]"))
@@ -37,6 +39,19 @@ function Cart() {
     console.log(cartItem.name);
 
   });
+
+              //Count amount of certain item
+            const nameCounts = {};
+            cartItems.forEach(item => {
+              nameCounts[item.name] = (nameCounts[item.name] || 0) + 1;
+            });
+            console.log(nameCounts);
+
+            //Remove duplicates
+            if(!nameSet.has(item.name)){
+              nameSet.add(item.name);
+              setUniqueCartItems(prevState => [...prevState, item])
+            }
 
   let duplicateItem = cartItems.includes()
   console.log(cartItems.length);
@@ -92,14 +107,8 @@ function Cart() {
       <>
         <p>Your cart items: </p>
         <ul id='cart-list'>
-          {cartItems.map((item) => {
+          {uniqueCartItems.map((item) => {
             console.log(item);
-
-            const nameCounts = {};
-            cartItems.forEach(item => {
-              nameCounts[item.name] = (nameCounts[item.name] || 0) + 1;
-            });
-            console.log(nameCounts);
 
             return (
             <li className='cart-list-item'>
