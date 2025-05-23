@@ -91,13 +91,9 @@ function Cart() {
 
       localStorage.clear(); //Clear cart when order submitted
       setOrderSubmitted(true);
-      // axios.delete(`${process.env.REACT_APP_BACKEND_URL}/deleteCart`)
-      // .then(res => {
-      //   console.log(res)
-      //   window.location.reload();
+  }
 
-      // })
-      // .catch(err => console.log(err));
+  function addItem(name){
 
   }
 
