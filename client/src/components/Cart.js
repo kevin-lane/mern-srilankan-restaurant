@@ -19,8 +19,10 @@ function Cart() {
   const [orderSubmitted, setOrderSubmitted] = useState(false);
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
     const storedCart = JSON.parse(localStorage.getItem("cart") || "[]");
     setCartItems(storedCart);
+
     const nameSet = new Set();
     const uniqueItems = [];
 
@@ -41,7 +43,7 @@ function Cart() {
     //   setCartItems(result.data);
     // })
     console.log(storedCart);
-
+    }
   }, [])
 
   let totalPrice = cartItems.reduce((prev, {price}) => prev + price, 0)
