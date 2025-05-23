@@ -50,7 +50,7 @@ function Cart() {
             //     nameSet.add(item.name);
             //     setUniqueCartItems(prevState => [...prevState, item])
             //   }
-            // });
+            });
             console.log(nameCounts);
 
 
