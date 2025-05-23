@@ -29,7 +29,7 @@ function Cart() {
       nameSet.add(cartItem.name);
       setUniqueCartItems(prevItem => [...prevItem, cartItem]);
     }
-    console.log(uniqueCartItems);
+    console.log(nameSet);
 
   });
 
