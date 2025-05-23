@@ -33,7 +33,7 @@ function Cart() {
   console.log(cartItems);
 
   cartItems.forEach(cartItem => {
-    console.log(cartItem);
+    console.log(cartItem.key);
 
   });
 
