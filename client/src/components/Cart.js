@@ -19,7 +19,8 @@ function Cart() {
   const [orderSubmitted, setOrderSubmitted] = useState(false);
 
   useEffect(() => {
-    const storedCart = setCartItems(JSON.parse(localStorage.getItem("cart") || "[]"));
+    const storedCart = JSON.parse(localStorage.getItem("cart") || "[]");
+    setCartItems(storedCart);
     const nameSet = new Set();
     const uniqueItems = [];
 
