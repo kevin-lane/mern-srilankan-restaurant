@@ -43,7 +43,7 @@ function Cart() {
   let totalPrice = cartItems.reduce((prev, {price}) => prev + price, 0)
   let items = cartItems.map(i => i.name);
   console.log(cartItems);
-    console.log(uniqueCartItems);
+    console.log("Cart items " + uniqueCartItems);
 
   console.log(cartItems.includes(item => item.name));
   // cartItems.forEach(cartItem => {
