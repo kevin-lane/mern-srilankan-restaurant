@@ -17,30 +17,17 @@ function Cart() {
   const [email, setEmail] = useState("");
   const [cartText, setCartText] = useState("Cart is empty");
   const [orderSubmitted, setOrderSubmitted] = useState(false);
+  const nameSet = new Set();
 
   useEffect(() => {
-    const storedCart = setCartItems(JSON.parse(localStorage.getItem("cart") || "[]"))
-    setCartItems(storedCart);
+    setCartItems(JSON.parse(localStorage.getItem("cart") || "[]"))
     console.log(cartItems);
 
-  //Count amount of certain item
-            const nameCounts = {};
-            const nameSet = new Set();
-
-            cartItems.forEach(item => {
-              nameCounts[item.name] = (nameCounts[item.name] || 0) + 1;
-
-              //Remove duplicates
-              if(!nameSet.has(item.name)){
-                nameSet.set(item.name, item);
-                setUniqueCartItems(prevState => [...prevState, item])
-              }
-            });
-            console.log(nameCounts);
-            setUniqueCartItems(Array.from(nameSet.values()));
-
-              // You can also log nameCounts if needed:
-              console.log("Name counts:", nameCounts);
+    // axios.get(`${process.env.REACT_APP_BACKEND_URL}/getCart`)
+    // .then(result => {
+    //   console.log(result.data);
+    //   setCartItems(result.data);
+    // })
   }, [])
 
   let totalPrice = cartItems.reduce((prev, {price}) => prev + price, 0)
@@ -53,7 +40,18 @@ function Cart() {
 
   });
 
+            //   //Count amount of certain item
+            // const nameCounts = {};
+            // cartItems.forEach(item => {
+            //   nameCounts[item.name] = (nameCounts[item.name] || 0) + 1;
 
+            //   //Remove duplicates
+            //   if(!nameSet.has(item.name)){
+            //     nameSet.add(item.name);
+            //     setUniqueCartItems(prevState => [...prevState, item])
+            //   }
+            // });
+            // console.log(nameCounts);
 
 
 
@@ -85,6 +83,13 @@ function Cart() {
 
       localStorage.clear(); //Clear cart when order submitted
       setOrderSubmitted(true);
+      // axios.delete(`${process.env.REACT_APP_BACKEND_URL}/deleteCart`)
+      // .then(res => {
+      //   console.log(res)
+      //   window.location.reload();
+
+      // })
+      // .catch(err => console.log(err));
 
   }
 
@@ -104,7 +109,7 @@ function Cart() {
       <>
         <p>Your cart items: </p>
         <ul id='cart-list'>
-          {uniqueCartItems.map((item) => {
+          {cartItems.map((item) => {
             console.log(item);
 
             return (
