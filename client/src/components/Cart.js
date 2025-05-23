@@ -33,7 +33,7 @@ function Cart() {
 
     console.log("NameSet:", nameSet); // This will now show expected values
   console.log("UniqueItems:", uniqueItems);
-    setCartItems(uniqueItems);
+    setUniqueCartItems(uniqueItems);
     // axios.get(`${process.env.REACT_APP_BACKEND_URL}/getCart`)
     // .then(result => {
     //   console.log(result.data);
@@ -44,6 +44,8 @@ function Cart() {
   let totalPrice = cartItems.reduce((prev, {price}) => prev + price, 0)
   let items = cartItems.map(i => i.name);
   console.log(cartItems);
+  console.log(uniqueCartItems);
+
   console.log(nameSet);
 
 
