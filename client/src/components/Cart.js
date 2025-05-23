@@ -27,7 +27,9 @@ function Cart() {
     console.log(cartItem);
     if(!nameSet.has(cartItem.name)){
       nameSet.add(cartItem.name);
-      setUniqueCartItems(prevItem => [...prevItem, cartItem]);
+      // setUniqueCartItems(prevItem => [...prevItem, cartItem]);
+      console.log(nameSet);
+
     }
 
   });
