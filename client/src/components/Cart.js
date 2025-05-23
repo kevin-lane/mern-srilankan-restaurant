@@ -97,6 +97,7 @@ function Cart() {
 
             return (
             <li className='cart-list-item'>
+              <div id='content-wrapper'><span id='cart-item-amount'>1x</span> </div>
               <div id='content-wrapper'><span id='cart-item-name'>{item.name}</span> </div>
               <div id='button-wrapper'><span id='cart-item-price'>{item.price}kr</span><button id='remove-btn' onClick={() => deleteItem(item._id)}><TrashIcon /></button></div>
             </li>)
