@@ -21,10 +21,10 @@ function Cart() {
   const uniqueItems = [];
 
   useEffect(() => {
-    setCartItems(JSON.parse(localStorage.getItem("cart") || "[]"))
+    const storedCart = JSON.parse(localStorage.getItem("cart") || "[]")
     console.log(cartItems);
 
-    cartItems.forEach((item) => {
+    storedCart.forEach((item) => {
       if(!nameSet.has(item.name)){
         nameSet.add(item.name);
         uniqueItems.push(item);
