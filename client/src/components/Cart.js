@@ -19,20 +19,15 @@ function Cart() {
   const [orderSubmitted, setOrderSubmitted] = useState(false);
 
   useEffect(() => {
-    setCartItems(JSON.parse(localStorage.getItem("cart") || "[]"));
+    const storedCart = JSON.parse(localStorage.getItem("cart") || "[]");
     const nameSet = new Set();
     const uniqueItems = [];
 
+  storedCart.forEach(cartItem => {
 
-    console.log(cartItems);
-
-  cartItems.forEach(cartItem => {
-    console.log(cartItem);
     if(!nameSet.has(cartItem.name)){
       nameSet.add(cartItem.name);
-      // setUniqueCartItems(prevItem => [...prevItem, cartItem]);
       uniqueItems.push(cartItem)
-      console.log(nameSet);
     }
 
   });
