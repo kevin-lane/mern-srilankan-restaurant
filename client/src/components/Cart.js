@@ -95,6 +95,12 @@ function Cart() {
           {cartItems.map((item) => {
             console.log(item);
 
+            const nameCounts = {};
+            cartItems.forEach(item => {
+              nameCounts[item.name] = (nameCounts[item.name] || 0) + 1;
+            });
+            console.log(nameCounts);
+
             return (
             <li className='cart-list-item'>
               <div id='content-wrapper'><span id='cart-item-amount'>1x</span> </div>
