@@ -120,9 +120,10 @@ function Cart() {
           {uniqueCartItems.map((item) => {
             return (
             <li className='cart-list-item'>
-              <div id='content-wrapper'><span id='cart-item-amount'>{nameCounts[item.name]}x</span> </div>
+              <div id='content-wrapper'><span id='cart-item-amount'>{nameCounts[item.name]}x </span> </div>
               <div id='content-wrapper'><span id='cart-item-name'>{item.name}</span> </div>
-              <div id='button-wrapper'><span id='cart-item-price'>{nameCounts[item.name] * item.price}kr</span><button id='remove-btn' onClick={() => deleteItem(item._id)}><TrashIcon /></button></div>
+              <div id='button-wrapper'><span id='cart-item-price'>{nameCounts[item.name] * item.price}kr</span>
+              <button id='remove-btn' onClick={() => deleteItem(item._id)}><TrashIcon /></button></div>
             </li>)
           })}
         </ul>
