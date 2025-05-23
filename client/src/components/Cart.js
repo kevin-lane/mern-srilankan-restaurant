@@ -37,7 +37,10 @@ function Cart() {
   console.log(cartItems.includes(item => item.name));
   cartItems.forEach(cartItem => {
     console.log(cartItem);
-
+    if(!nameSet.has(cartItem.name)){
+      nameSet.add(cartItem.name);
+      setUniqueCartItems(prevItem => [...prevItem, cartItem]);
+    }
   });
 
               //Count amount of certain item
