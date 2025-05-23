@@ -44,14 +44,16 @@ function Cart() {
             const nameCounts = {};
             cartItems.forEach(item => {
               nameCounts[item.name] = (nameCounts[item.name] || 0) + 1;
+
+              //Remove duplicates
+              if(!nameSet.has(item.name)){
+                nameSet.add(item.name);
+                setUniqueCartItems(prevState => [...prevState, item])
+              }
             });
             console.log(nameCounts);
 
-            //Remove duplicates
-            if(!nameSet.has(item.name)){
-              nameSet.add(item.name);
-              setUniqueCartItems(prevState => [...prevState, item])
-            }
+
 
   let duplicateItem = cartItems.includes()
   console.log(cartItems.length);
