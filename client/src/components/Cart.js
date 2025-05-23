@@ -30,7 +30,9 @@ function Cart() {
 
   let totalPrice = cartItems.reduce((prev, {price}) => prev + price, 0)
   let items = cartItems.map(i => i.name);
+  console.log(cartItems);
 
+  let duplicateItem = cartItems.includes()
 
   function submitOrder(){
     alert("Thank you for your order")
