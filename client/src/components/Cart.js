@@ -48,24 +48,11 @@ function Cart() {
 
 
   console.log(cartItems.includes(item => item.name));
-  // cartItems.forEach(cartItem => {
-  //   console.log(cartItem);
-  //   if(!nameSet.has(cartItem.name)){
-  //     nameSet.add(cartItem.name);
-  //     setUniqueCartItems(prevItem => [...prevItem, cartItem]);
-  //   }
-  // });
 
               //Count amount of certain item
             const nameCounts = {};
             cartItems.forEach(item => {
               nameCounts[item.name] = (nameCounts[item.name] || 0) + 1;
-
-            //   //Remove duplicates
-            //   if(!nameSet.has(item.name)){
-            //     nameSet.add(item.name);
-            //     setUniqueCartItems(prevState => [...prevState, item])
-            //   }
             });
             console.log(nameCounts);
 
@@ -130,7 +117,7 @@ function Cart() {
 
             return (
             <li className='cart-list-item'>
-              <div id='content-wrapper'><span id='cart-item-amount'>1x</span> </div>
+              <div id='content-wrapper'><span id='cart-item-amount'>{nameCounts[item.name]}x</span> </div>
               <div id='content-wrapper'><span id='cart-item-name'>{item.name}</span> </div>
               <div id='button-wrapper'><span id='cart-item-price'>{item.price}kr</span><button id='remove-btn' onClick={() => deleteItem(item._id)}><TrashIcon /></button></div>
             </li>)
