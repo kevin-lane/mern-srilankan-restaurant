@@ -23,6 +23,14 @@ function Cart() {
     setCartItems(JSON.parse(localStorage.getItem("cart") || "[]"))
     console.log(cartItems);
 
+  cartItems.forEach(cartItem => {
+    console.log(cartItem);
+    if(!nameSet.has(cartItem.name)){
+      nameSet.add(cartItem.name);
+      setUniqueCartItems(prevItem => [...prevItem, cartItem]);
+    }
+  });
+
     // axios.get(`${process.env.REACT_APP_BACKEND_URL}/getCart`)
     // .then(result => {
     //   console.log(result.data);
@@ -35,13 +43,13 @@ function Cart() {
   console.log(cartItems);
 
   console.log(cartItems.includes(item => item.name));
-  cartItems.forEach(cartItem => {
-    console.log(cartItem);
-    if(!nameSet.has(cartItem.name)){
-      nameSet.add(cartItem.name);
-      setUniqueCartItems(prevItem => [...prevItem, cartItem]);
-    }
-  });
+  // cartItems.forEach(cartItem => {
+  //   console.log(cartItem);
+  //   if(!nameSet.has(cartItem.name)){
+  //     nameSet.add(cartItem.name);
+  //     setUniqueCartItems(prevItem => [...prevItem, cartItem]);
+  //   }
+  // });
 
               //Count amount of certain item
             const nameCounts = {};
