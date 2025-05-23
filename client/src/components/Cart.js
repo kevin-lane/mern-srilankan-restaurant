@@ -23,9 +23,6 @@ function Cart() {
     setCartItems(JSON.parse(localStorage.getItem("cart") || "[]"))
     console.log(cartItems);
 
-    cartItems.map((item) => {
-      console.log(item)
-    });
     // axios.get(`${process.env.REACT_APP_BACKEND_URL}/getCart`)
     // .then(result => {
     //   console.log(result.data);
@@ -39,7 +36,7 @@ function Cart() {
 
   console.log(cartItems.includes(item => item.name));
   cartItems.forEach(cartItem => {
-    console.log(cartItem.name);
+    console.log(cartItem);
 
   });
 
