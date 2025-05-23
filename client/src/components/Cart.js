@@ -25,7 +25,7 @@ function Cart() {
 
     cartItems.map((item) => {
       console.log(item)
-    } );
+    });
     // axios.get(`${process.env.REACT_APP_BACKEND_URL}/getCart`)
     // .then(result => {
     //   console.log(result.data);
