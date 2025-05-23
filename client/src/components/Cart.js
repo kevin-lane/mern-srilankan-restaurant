@@ -32,7 +32,7 @@ function Cart() {
   let items = cartItems.map(i => i.name);
   console.log(cartItems);
 
-  cartItems.includes(item => item.key);
+  console.log(cartItems.includes(item => item.key));
   cartItems.forEach(cartItem => {
     console.log(cartItem.key);
 
