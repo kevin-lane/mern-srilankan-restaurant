@@ -36,6 +36,7 @@ function Cart() {
   console.log("StoredCart: ", storedCart);
 
     setUniqueCartItems(uniqueItems);
+    setCartItems(storedCart);
     // axios.get(`${process.env.REACT_APP_BACKEND_URL}/getCart`)
     // .then(result => {
     //   console.log(result.data);
