@@ -32,6 +32,11 @@ function Cart() {
   let items = cartItems.map(i => i.name);
   console.log(cartItems);
 
+  cartItems.forEach(cartItem => {
+    console.log(cartItem);
+
+  });
+
   let duplicateItem = cartItems.includes()
 
   function submitOrder(){
