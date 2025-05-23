@@ -19,28 +19,29 @@ function Cart() {
   const [orderSubmitted, setOrderSubmitted] = useState(false);
 
   useEffect(() => {
-    const storedCart = setCartItems(JSON.parse(localStorage.getItem("cart") || "[]"));
+    setCartItems(JSON.parse(localStorage.getItem("cart") || "[]"));
     const nameSet = new Set();
     const uniqueItems = [];
 
+
     console.log(cartItems);
 
-  storedCart.forEach(item => {
-    console.log(item);
-    if(!nameSet.has(item.name)){
-      nameSet.add(item.name);
+  cartItems.forEach(cartItem => {
+    console.log(cartItem);
+    if(!nameSet.has(cartItem.name)){
+      nameSet.add(cartItem.name);
       // setUniqueCartItems(prevItem => [...prevItem, cartItem]);
-      uniqueItems.push(item);
+      uniqueItems.push(cartItem)
+      console.log(nameSet);
     }
+
   });
-  setUniqueCartItems(uniqueItems);
+  setCartItems(uniqueItems)
     // axios.get(`${process.env.REACT_APP_BACKEND_URL}/getCart`)
     // .then(result => {
     //   console.log(result.data);
     //   setCartItems(result.data);
     // })
-    console.log(storedCart);
-
   }, [])
 
   let totalPrice = cartItems.reduce((prev, {price}) => prev + price, 0)
