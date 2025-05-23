@@ -33,6 +33,8 @@ function Cart() {
 
     console.log("NameSet:", nameSet); // This will now show expected values
   console.log("UniqueItems:", uniqueItems);
+  console.log("StoredCart: ", storedCart);
+
     setUniqueCartItems(uniqueItems);
     // axios.get(`${process.env.REACT_APP_BACKEND_URL}/getCart`)
     // .then(result => {
