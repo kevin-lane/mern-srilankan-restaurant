@@ -39,6 +39,8 @@ function Cart() {
   });
 
   let duplicateItem = cartItems.includes()
+  console.log(cartItems.length);
+
 
   function submitOrder(){
     alert("Thank you for your order")
