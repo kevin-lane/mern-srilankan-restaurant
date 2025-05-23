@@ -117,7 +117,7 @@ function Cart() {
       <>
         <p>Your cart items: </p>
         <ul id='cart-list'>
-          {cartItems.map((item) => {
+          {uniqueCartItems.map((item) => {
             // console.log(item);
 
             return (
