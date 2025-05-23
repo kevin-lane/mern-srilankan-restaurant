@@ -17,17 +17,30 @@ function Cart() {
   const [email, setEmail] = useState("");
   const [cartText, setCartText] = useState("Cart is empty");
   const [orderSubmitted, setOrderSubmitted] = useState(false);
-  const nameSet = new Set();
 
   useEffect(() => {
-    setCartItems(JSON.parse(localStorage.getItem("cart") || "[]"))
+    const storedCart = setCartItems(JSON.parse(localStorage.getItem("cart") || "[]"))
+    setCartItems(storedCart);
     console.log(cartItems);
 
-    // axios.get(`${process.env.REACT_APP_BACKEND_URL}/getCart`)
-    // .then(result => {
-    //   console.log(result.data);
-    //   setCartItems(result.data);
-    // })
+  //Count amount of certain item
+            const nameCounts = {};
+            const nameSet = new Set();
+
+            storedCart.forEach(item => {
+              nameCounts[item.name] = (nameCounts[item.name] || 0) + 1;
+
+              //Remove duplicates
+              if(!nameSet.has(item.name)){
+                nameSet.set(item.name, item);
+                setUniqueCartItems(prevState => [...prevState, item])
+              }
+            });
+            console.log(nameCounts);
+            setUniqueCartItems(Array.from(nameSet.values()));
+
+              // You can also log nameCounts if needed:
+              console.log("Name counts:", nameCounts);
   }, [])
 
   let totalPrice = cartItems.reduce((prev, {price}) => prev + price, 0)
@@ -40,18 +53,7 @@ function Cart() {
 
   });
 
-              //Count amount of certain item
-            const nameCounts = {};
-            cartItems.forEach(item => {
-              nameCounts[item.name] = (nameCounts[item.name] || 0) + 1;
 
-              //Remove duplicates
-              if(!nameSet.has(item.name)){
-                nameSet.add(item.name);
-                setUniqueCartItems(prevState => [...prevState, item])
-              }
-            });
-            console.log(nameCounts);
 
 
 
