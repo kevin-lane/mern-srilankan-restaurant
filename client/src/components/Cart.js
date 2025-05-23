@@ -18,13 +18,20 @@ function Cart() {
   const [cartText, setCartText] = useState("Cart is empty");
   const [orderSubmitted, setOrderSubmitted] = useState(false);
   const nameSet = new Set();
+  const uniqueItems = [];
 
   useEffect(() => {
     setCartItems(JSON.parse(localStorage.getItem("cart") || "[]"))
     console.log(cartItems);
 
+    cartItems.forEach((item) => {
+      if(!nameSet.has(item.name)){
+        nameSet.add(item.name);
+        uniqueItems.push(item);
+      }
+    });
 
-
+    setCartItems(uniqueItems);
     // axios.get(`${process.env.REACT_APP_BACKEND_URL}/getCart`)
     // .then(result => {
     //   console.log(result.data);
