@@ -92,16 +92,26 @@ function Cart() {
 
     console.log(nameCounts);
     setCartItems(updatedCart);
-    localStorage.setItem("cart", JSON.stringify(updatedCart))
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
   }
 
   function deleteItem(cartItem){
+    const updatedCart = [...cartItems];
     console.log(cartItems);
     nameCounts[cartItem.name]--;
         console.log(cartItem.name)
     console.log(nameCounts[cartItem.name]);
     console.log(nameCounts);
 
+    const index = updatedCart.findIndex(item => item.name === cartItem.name);
+
+    if(index > -1){
+      updatedCart.splice(index, 1);
+    }
+
+    console.log(updatedCart);
+    setCartItems(updatedCart);
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
   }
 
   return (
