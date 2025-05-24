@@ -95,7 +95,8 @@ function Cart() {
     console.log(nameCounts[cartItem.name]);
 
     console.log(nameCounts);
-    setCartItems(prevItems => [...prevItems, cartItem])
+    setCartItems(prevItems => [...prevItems, cartItem]);
+    localStorage.setItem("cart", JSON.stringify(cartItems))
   }
 
   function deleteItem(id){
