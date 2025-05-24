@@ -121,6 +121,8 @@ function Cart() {
         <p>Your cart items: </p>
         <ul id='cart-list'>
           {uniqueCartItems.map((item) => {
+            console.log(item);
+
             return (
             <li className='cart-list-item'>
               <div id='content-wrapper'><span id='cart-item-amount'>{nameCounts[item.name]}x </span> </div>
