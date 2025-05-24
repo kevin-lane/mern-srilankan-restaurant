@@ -8,7 +8,8 @@ import XIcon from './components/icons/xIcon';
 
 function App() {
   const [cartOpen, setCartOpen] = useState(false);
-  const [cartCount, setCartCount] = useState(JSON.parse(localStorage.getItem("cart")  || "[]").length);
+  const [cartItems, setCartItems] = useState(JSON.parse(localStorage.getItem("cart")  || "[]").length);
+  const [cartCount, setCartCount] = cartItems.length;
 
   useEffect(() => {
     setCartCount(cartCount);
