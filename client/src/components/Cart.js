@@ -23,7 +23,7 @@ function Cart() {
 
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem("cart") || "[]")
-    console.log(cartItems);
+    console.log("CartItems (useEffect)" + cartItems);
 
     storedCart.forEach((item) => {
       if(!nameSet.has(item.name)){
@@ -47,13 +47,10 @@ function Cart() {
 
   let totalPrice = cartItems.reduce((prev, {price}) => prev + price, 0)
   let items = cartItems.map(i => i.name);
-  console.log(cartItems);
-  console.log(uniqueCartItems);
+  console.log("CartItems " + cartItems);
+  console.log("Unique Items " + uniqueCartItems);
 
   console.log(nameSet);
-
-
-  console.log(cartItems.includes(item => item.name));
 
               //Count amount of certain item
             const nameCounts = {};
@@ -63,10 +60,6 @@ function Cart() {
             });
             console.log(nameCounts);
 
-
-
-
-  let duplicateItem = cartItems.includes()
   console.log(cartItems.length);
 
 
