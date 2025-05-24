@@ -99,6 +99,8 @@ function Cart() {
   function addItem(name){
     nameCounts[name] = nameCounts[name]++;
     console.log(name)
+    console.log(nameCounts[name]);
+
     console.log(nameCounts);
   }
 
