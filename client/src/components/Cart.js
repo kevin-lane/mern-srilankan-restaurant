@@ -97,7 +97,8 @@ function Cart() {
   }
 
   function addItem(name){
-
+    nameCounts[name] = nameCounts[name]++;
+    console.log(nameCounts);
   }
 
   function deleteItem(id){
@@ -124,7 +125,7 @@ function Cart() {
               <div id='button-wrapper'><span id='cart-item-price'>{nameCounts[item.name] * item.price}kr</span>
               <button id='remove-btn' onClick={() => deleteItem(item._id)}><TrashIcon /></button>
               <button id='remove-btn' onClick={() => deleteItem(item._id)}>-</button>
-              <button id='remove-btn' onClick={() => deleteItem(item._id)}>+</button></div>
+              <button id='remove-btn' onClick={() => addItem(item.name)}>+</button></div>
             </li>)
           })}
         </ul>
