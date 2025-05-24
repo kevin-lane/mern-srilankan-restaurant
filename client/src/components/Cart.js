@@ -17,6 +17,7 @@ function Cart() {
   const [email, setEmail] = useState("");
   const [cartText, setCartText] = useState("Cart is empty");
   const [orderSubmitted, setOrderSubmitted] = useState(false);
+  const [nameCount, setNameCount] = useState(0);
   const nameSet = new Set();
   const uniqueItems = [];
 
@@ -59,8 +60,10 @@ function Cart() {
             cartItems.forEach(item => {
               nameCounts[item.name] = (nameCounts[item.name] || 0) + 1;
               console.log(nameCounts[item.name]);
+              setNameCount(nameCounts[item.name]);
             });
             console.log(nameCounts);
+            console.log("Name count: " + nameCount);
 
 
 
