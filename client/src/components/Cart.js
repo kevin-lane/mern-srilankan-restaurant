@@ -59,7 +59,7 @@ function Cart() {
             cartItems.forEach(item => {
               nameCounts[item.name] = (nameCounts[item.name] || 0) + 1;
             });
-            console.log(nameCounts[item.name]);
+            // console.log(nameCounts[item.name]);
 
 
 
