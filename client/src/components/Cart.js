@@ -47,13 +47,13 @@ function Cart() {
 
   console.log(nameSet);
 
-              //Count amount of certain item
-            const nameCounts = {};
-            cartItems.forEach(item => {
-              nameCounts[item.name] = (nameCounts[item.name] || 0) + 1;
-              console.log(nameCounts[item.name]);
-            });
-            console.log(nameCounts);
+    //Count amount of certain item
+  const nameCounts = {};
+  cartItems.forEach(item => {
+    nameCounts[item.name] = (nameCounts[item.name] || 0) + 1;
+    console.log(nameCounts[item.name]);
+  });
+  console.log(nameCounts);
 
   console.log(cartItems.length);
 
@@ -95,8 +95,13 @@ function Cart() {
     localStorage.setItem("cart", JSON.stringify(updatedCart))
   }
 
-  function deleteItem(id){
+  function deleteItem(cartItem){
     console.log(cartItems);
+    nameCounts[cartItem.name]--;
+        console.log(cartItem.name)
+    console.log(nameCounts[cartItem.name]);
+    console.log(nameCounts);
+
   }
 
   return (
