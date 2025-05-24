@@ -10,6 +10,9 @@ function App() {
   const [cartOpen, setCartOpen] = useState(false);
   const [cartCount, setCartCount] = useState(JSON.parse(localStorage.getItem("cart")  || "[]").length);
 
+  useEffect(() => {
+    setCartCount(cartCount);
+  })
   //To count the amount of items in Cart and display on cart button
   //Add new URL
     // useEffect(() => {
