@@ -17,11 +17,10 @@ function Cart() {
   const [email, setEmail] = useState("");
   const [cartText, setCartText] = useState("Cart is empty");
   const [orderSubmitted, setOrderSubmitted] = useState(false);
-
+  const nameSet = new Set();
+  const uniqueItems = [];
 
   useEffect(() => {
-      const nameSet = new Set();
-      const uniqueItems = [];
     const storedCart = JSON.parse(localStorage.getItem("cart") || "[]")
     console.log(cartItems);
 
