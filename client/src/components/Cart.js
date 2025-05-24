@@ -38,11 +38,6 @@ function Cart() {
 
     setUniqueCartItems(uniqueItems);
     setCartItems(storedCart);
-    // axios.get(`${process.env.REACT_APP_BACKEND_URL}/getCart`)
-    // .then(result => {
-    //   console.log(result.data);
-    //   setCartItems(result.data);
-    // })
   }, [])
 
   let totalPrice = cartItems.reduce((prev, {price}) => prev + price, 0)
@@ -102,14 +97,8 @@ function Cart() {
 
   function deleteItem(id){
     console.log(cartItems);
-
-    // axios.delete(`${process.env.REACT_APP_BACKEND_URL}/deleteCartItem/` + id)
-    // .then(result => {
-    //   console.log(result);
-    //   window.location.reload();
-    // })
-    // .catch(err => console.log(err))
   }
+
   return (
     <div>
       {cartItems.length === 0 ? <p>{cartText}</p> :
@@ -125,8 +114,9 @@ function Cart() {
               <div id='content-wrapper'><span id='cart-item-name'>{item.name}</span> </div>
               <div id='button-wrapper'><span id='cart-item-price'>{nameCounts[item.name] * item.price}kr</span>
               <button id='remove-btn' onClick={() => deleteItem(item._id)}><TrashIcon /></button>
-              <button id='remove-btn' onClick={() => deleteItem(item._id)}>-</button>
               <button id='remove-btn' onClick={() => addItem(item)}>+</button></div>
+              <button id='remove-btn' onClick={() => deleteItem(item._id)}>-</button>
+
             </li>)
           })}
         </ul>
