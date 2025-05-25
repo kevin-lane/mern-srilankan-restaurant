@@ -35,7 +35,12 @@
 }
 
 #remove-btn{
-  float: right;
+  width: 50px;
+    height: 30px;
+    background-color: green;
+    color: white;
+    font-size: large;
+    border: none;
 }
 
 #total-price{
