@@ -4,6 +4,7 @@ import MenuList from './components/MenuList';
 import Cart from './components/Cart';
 import CartIcon from './components/icons/cartIcon';
 import XIcon from './components/icons/xIcon';
+import Logo from '../public/tastes-from-srilanka.jpg';
 
 function App() {
   const [cartOpen, setCartOpen] = useState(false);
@@ -22,6 +23,7 @@ function App() {
   return (
     <div className="App">
       <div id='heading-section'>
+        <img src={Logo} alt="tastes-from-srilanka-logo" width={200} height={200}/>
         <div id='heading-text'>
           <h1>Tastes from Sri Lanka</h1>
           <p id='undertext'>Order delicious food and bites from Sri Lanka online - in Sweden</p>
