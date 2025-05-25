@@ -1,11 +1,12 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { use, useEffect, useState } from 'react';
 import './cart.css';
 import TrashIcon from './icons/trashIcon';
 import OrderConfirmation from './modals/OrderConfirmation';
 
 function Cart() {
   const [cartItems, setCartItems] = useState([]);
+  const [cartCount, setCartCount] = useState(cartItems.length)
   const [uniqueCartItems, setUniqueCartItems] = useState([]);
   const [orderedItems, setOrderedItems] = useState([]);
   const [firstName, setFirstName] = useState("");
