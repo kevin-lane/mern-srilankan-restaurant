@@ -27,7 +27,7 @@ function App() {
           <p id='undertext'>Order delicious food and bites from Sri Lanka online - in Sweden</p>
         </div>
         <div id='cart-btn-holder'>
-          <button id='cart-btn' onClick={() => setCartOpen(!cartOpen)}>{cartOpen ? <XIcon /> : <CartIcon />} ({JSON.parse(localStorage.getItem("cart")  || "[]").length})</button>
+          <button id='cart-btn' onClick={() => setCartOpen(!cartOpen)}>{cartOpen ? <XIcon /> : <CartIcon />} ({cartCount})</button>
         </div>
       </div>
       {cartOpen ? <Cart /> : <MenuList /> }
