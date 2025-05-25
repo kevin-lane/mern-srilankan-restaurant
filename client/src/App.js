@@ -32,7 +32,8 @@ function App() {
         </div>
       </div>
       <div id='banner'>
-
+ <h1>Tastes from Sri Lanka</h1>
+          <p id='undertext'>Order delicious food and bites from Sri Lanka online - in Sweden</p>
       </div>
       {cartOpen ? <Cart setCartCount={setCartCount}/> : <MenuList /> }
       <address id='address-field'>
