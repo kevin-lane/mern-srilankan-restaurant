@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <div id='heading-section'>
-        <img src="https://sdmntprukwest.oaiusercontent.com/files/00000000-6aec-6243-8863-9d6e596b2a50/raw?se=2025-05-25T18%3A22%3A02Z&sp=r&sv=2024-08-04&sr=b&scid=f37988b6-4fa4-557b-87d4-b67e8e9890b5&skoid=b32d65cd-c8f1-46fb-90df-c208671889d4&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-25T05%3A17%3A14Z&ske=2025-05-26T05%3A17%3A14Z&sks=b&skv=2024-08-04&sig=kK9%2BpNQFx%2BFU4jvhDhalcblz4ZVu%2BlXviGmoXANlN9M%3D" alt="tastes-from-srilanka-logo" width={200} height={200}/>
+        <img src="https://sdmntprukwest.oaiusercontent.com/files/00000000-6aec-6243-8863-9d6e596b2a50/raw?se=2025-05-25T21%3A39%3A02Z&sp=r&sv=2024-08-04&sr=b&scid=e069e05e-5066-5e3c-9ebd-4a68472e33b8&skoid=82a3371f-2f6c-4f81-8a78-2701b362559b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-25T06%3A52%3A49Z&ske=2025-05-26T06%3A52%3A49Z&sks=b&skv=2024-08-04&sig=lStNZ2nQ%2B8UZD0xF14jGPFyz0LeHtRm9P/34Q8MAENc%3D" alt="tastes-from-srilanka-logo" width={200} height={200}/>
         {/* <div id='heading-text'>
           <h1>Tastes from Sri Lanka</h1>
           <p id='undertext'>Order delicious food and bites from Sri Lanka online - in Sweden</p>
