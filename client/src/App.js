@@ -31,6 +31,9 @@ function App() {
           <button id='cart-btn' onClick={() => setCartOpen(!cartOpen)}>{cartOpen ? <XIcon /> : <CartIcon />} ({cartCount})</button>
         </div>
       </div>
+      <div id='banner'>
+
+      </div>
       {cartOpen ? <Cart setCartCount={setCartCount}/> : <MenuList /> }
       <address id='address-field'>
         <p>Visiting Address:</p>
