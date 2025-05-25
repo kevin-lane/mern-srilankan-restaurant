@@ -30,7 +30,7 @@ function App() {
           <button id='cart-btn' onClick={() => setCartOpen(!cartOpen)}>{cartOpen ? <XIcon /> : <CartIcon />} ({cartCount})</button>
         </div>
       </div>
-      {cartOpen ? <Cart setCartCount={setCartCount}/> : <MenuList /> }
+      {cartOpen ? <Cart setCartCount={setCartCount(cartCount)}/> : <MenuList /> }
       <address id='address-field'>
         <p>Visiting Address:</p>
         <p>Tastes from Sri Lanka</p>
