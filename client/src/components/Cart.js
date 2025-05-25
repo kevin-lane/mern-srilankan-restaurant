@@ -4,9 +4,9 @@ import './cart.css';
 import TrashIcon from './icons/trashIcon';
 import OrderConfirmation from './modals/OrderConfirmation';
 
-function Cart() {
+function Cart( {setCartCount} ) {
   const [cartItems, setCartItems] = useState([]);
-  const [cartCount, setCartCount] = useState(cartItems.length)
+  // const [cartCount, setCartCount] = useState(cartItems.length)
   const [uniqueCartItems, setUniqueCartItems] = useState([]);
   const [orderedItems, setOrderedItems] = useState([]);
   const [firstName, setFirstName] = useState("");
