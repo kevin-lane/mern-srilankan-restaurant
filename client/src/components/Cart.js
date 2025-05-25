@@ -112,8 +112,8 @@ function Cart() {
 
     console.log(updatedCart);
     setCartItems(updatedCart);
-    setCartCount(updatedCart.length)
     localStorage.setItem("cart", JSON.stringify(updatedCart));
+    setCartCount(updatedCart.length)
     console.log(JSON.parse(localStorage.getItem("cart")  || "[]").length);
 
   }
