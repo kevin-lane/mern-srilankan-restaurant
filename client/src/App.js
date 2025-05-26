@@ -34,11 +34,12 @@ function App() {
       <div id='banners'>
         <div id='banner-left'>
           <div id='heading-text'>
-            <h1>Tastes from Sri Lanka</h1>
+            {/* <h1>Tastes from Sri Lanka</h1> */}
             <p id='undertext'>Order delicious food and bites from Sri Lanka online - in Sweden</p>
           </div>
         </div>
         <div id='banner-right'>
+          <h1>Tastes from Sri Lanka</h1>
           <p>
             Ayobowan and vannakam! Tastes From Sri Lanka is a Sri Lankan Restaurant in Stockholm, Sweden. We offer delicious and authentic food from Sri Lanka, which is an island nation south of India.
             At our restaurant, you can order your food online and come to the restaurant!
