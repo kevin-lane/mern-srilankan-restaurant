@@ -38,7 +38,7 @@ function App() {
             <p id='undertext'>Order delicious food and bites from Sri Lanka online - in Sweden</p>
           </div>
           <div>
-            <button id='call-to-action-btn' type=""><a href='#menu-selection'>Order something delicious</a></button>
+            <a href='#menu-selection'>Order something delicious</a>
           </div>
         </div>
         <div id='banner-right'>
