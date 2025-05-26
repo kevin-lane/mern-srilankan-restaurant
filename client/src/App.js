@@ -23,32 +23,28 @@ function App() {
     <div className="App">
       <div id='heading-section'>
         <img src="/tastes-from-srilanka-logo.jpg" alt="tastes-from-srilanka-logo" width={200} height={200}/>
-        {/* <div id='heading-text'>
-          <h1>Tastes from Sri Lanka</h1>
-          <p id='undertext'>Order delicious food and bites from Sri Lanka online - in Sweden</p>
-        </div> */}
         <div id='cart-btn-holder'>
           <button id='cart-btn' onClick={() => setCartOpen(!cartOpen)}>{cartOpen ? <XIcon /> : <CartIcon />} ({cartCount})</button>
         </div>
       </div>
-      <div id='banners'>
-        <div id='banner-left'>
-          {/* <div id='heading-text'>
-            <p id='undertext'>Order delicious food and bites from Sri Lanka online - in Sweden</p>
-          </div> */}
-          <div id='cta-container'>
-            <a id='go-to-menu-btn' href='#menu-selection'>Order something delicious</a>
+      {cartOpen ? <></> :
+        <div id='banners'>
+          <div id='banner-left'>
+            <div id='cta-container'>
+              <a id='go-to-menu-btn' href='#menu-selection'>Order something delicious</a>
+            </div>
           </div>
-        </div>
-        <div id='banner-right'>
-          <h1 id='header-text'>Tastes from Sri Lanka</h1>
-          <p id='intro-text'>
+          <div id='banner-right'>
+            <h1 id='header-text'>Tastes from Sri Lanka</h1>
+            <p id='intro-text'>
             Ayobowan and vannakam! Tastes From Sri Lanka is a Sri Lankan Restaurant in Stockholm, Sweden. We offer delicious and authentic food from Sri Lanka, which is an island nation south of India.
             At our restaurant, you can order your food online and come to the restaurant!
             We look forward to welcome you!
-          </p>
+            </p>
+          </div>
         </div>
-      </div>
+      }
+
       <div id='menu-selection'>
         {cartOpen ? <Cart setCartCount={setCartCount}/> : <MenuList /> }
       </div>
