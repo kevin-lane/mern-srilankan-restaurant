@@ -38,7 +38,7 @@ function App() {
             <p id='undertext'>Order delicious food and bites from Sri Lanka online - in Sweden</p>
           </div>
           <div>
-            <button type="">Order something delicious</button>
+            <button id='call-to-action-btn' type=""><a href='#menu-selection'>Order something delicious</a></button>
           </div>
         </div>
         <div id='banner-right'>
@@ -50,7 +50,9 @@ function App() {
           </p>
         </div>
       </div>
-      {cartOpen ? <Cart setCartCount={setCartCount}/> : <MenuList /> }
+      <div id='menu-selection'>
+        {cartOpen ? <Cart setCartCount={setCartCount}/> : <MenuList /> }
+      </div>
       <address id='address-field'>
         <p>Visiting Address:</p>
         <p>Tastes from Sri Lanka</p>
