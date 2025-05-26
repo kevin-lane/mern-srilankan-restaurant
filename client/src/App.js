@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <div id='heading-section'>
-        <img src="/public/tastes-from-srilanka-logo.jpg" alt="tastes-from-srilanka-logo" width={200} height={200}/>
+        <img src="../public/tastes-from-srilanka-logo.jpg" alt="tastes-from-srilanka-logo" width={200} height={200}/>
         {/* <div id='heading-text'>
           <h1>Tastes from Sri Lanka</h1>
           <p id='undertext'>Order delicious food and bites from Sri Lanka online - in Sweden</p>
