@@ -52,7 +52,17 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+#go-to-menu-btn{
+  display: block;
+    border: 1px solid black;
+    padding: 2rem;
+    margin: 8rem;
+    text-decoration: none;
+    font-size: large;
+    color: yellow;
+    font-family: sans-serif;
+    background-image: repeating-linear-gradient(green, black, transparent 100%);
+}
 #cart-btn{
   margin-right: 1rem;
     background-color: #941e32;
