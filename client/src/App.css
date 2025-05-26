@@ -80,6 +80,7 @@
     color: yellow;
     font-family: sans-serif;
     background-color: #941e32;
+    opacity: 0.85;
 }
 #cart-btn{
   margin-right: 1rem;
