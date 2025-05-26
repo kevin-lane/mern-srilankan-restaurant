@@ -36,7 +36,7 @@ function App() {
           {/* <div id='heading-text'>
             <p id='undertext'>Order delicious food and bites from Sri Lanka online - in Sweden</p>
           </div> */}
-          <div>
+          <div id='cta-container'>
             <a id='go-to-menu-btn' href='#menu-selection'>Order something delicious</a>
           </div>
         </div>
