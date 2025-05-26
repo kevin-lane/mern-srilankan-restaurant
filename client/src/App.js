@@ -37,6 +37,9 @@ function App() {
             {/* <h1>Tastes from Sri Lanka</h1> */}
             <p id='undertext'>Order delicious food and bites from Sri Lanka online - in Sweden</p>
           </div>
+          <div>
+            <button type="">Order something delicious</button>
+          </div>
         </div>
         <div id='banner-right'>
           <h1>Tastes from Sri Lanka</h1>
