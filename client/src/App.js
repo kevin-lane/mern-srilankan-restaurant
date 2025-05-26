@@ -33,10 +33,9 @@ function App() {
       </div>
       <div id='banners'>
         <div id='banner-left'>
-          <div id='heading-text'>
-            {/* <h1>Tastes from Sri Lanka</h1> */}
+          {/* <div id='heading-text'>
             <p id='undertext'>Order delicious food and bites from Sri Lanka online - in Sweden</p>
-          </div>
+          </div> */}
           <div>
             <a id='go-to-menu-btn' href='#menu-selection'>Order something delicious</a>
           </div>
