@@ -64,7 +64,14 @@
   width: 65%;
     margin-left: auto;
     margin-right: auto;
-}
+    @media screen and (max-width: 768px) {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin-inline: auto;
+      width: 65%;
+    }
+   }
 
 #banner-right{
   background-color: #005f56;
