@@ -44,9 +44,8 @@
 #remove-btn{
   background-color: white;
   border: 1px solid black;
-  color: black;
+  color: green;
   font-size: x-large;
-    /* height: 30px; */
   width: 50px;
 }
 
