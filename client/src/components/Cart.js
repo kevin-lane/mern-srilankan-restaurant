@@ -120,7 +120,7 @@ function Cart( {setCartCount} ) {
   }
 
   return (
-    <div>
+    <div id='cart'>
       {cartItems.length === 0 ? <p>{cartText}</p> :
       <>
         <p>Your cart items: </p>
