@@ -118,6 +118,16 @@
     padding-top: 0.5rem;
 }
 
+#cart-count{
+  position: absolute;
+  top: 3rem;
+  right: 0.5rem;
+  background-color: yellow;
+  color: black;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
 #address-field{
   margin: 4rem;
 }
