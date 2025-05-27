@@ -20,13 +20,10 @@
 }
 
 #cart-item-price{
-  float: left;
-  margin-right: 1rem;
-  font-weight: bold;
+  font-style: italic;
 }
 
 #cart-item-name{
-  float: right;
   font-weight: bold;
 }
 

@@ -132,8 +132,8 @@ function Cart( {setCartCount} ) {
             <li className='cart-list-item'>
               <div id='content-wrapper'></div>
               <div id='content-wrapper'>
-                <span id='cart-item-name'>{item.name}</span>
-                <span id='cart-item-price'>{nameCounts[item.name] * item.price}kr</span>
+                <p id='cart-item-name'>{item.name}</p>
+                <p id='cart-item-price'>{nameCounts[item.name] * item.price}kr</p>
               </div>
               <div id='button-wrapper'>
                 <button id='remove-btn' onClick={() => deleteItem(item)}>-</button>
