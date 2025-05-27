@@ -39,7 +39,7 @@ function MenuCard(props) {
         <p id='menu-name'>{props.name}</p>
         <p>{props.price}kr</p>
         <img id='menu-img' src={props.image} alt="" />
-      <button id='submit-btn' type="" onClick={addItem}>+</button>
+      <button id='submit-btn' type="" onClick={addItem}>+ Add to cart</button>
     </div>
   )
 }
