@@ -10,6 +10,7 @@ background-color: #df7500;
     width: 50%;
     @media screen and (max-width: 500px) {
       width: 100%;
+      left: 0;
     }
 }
 
