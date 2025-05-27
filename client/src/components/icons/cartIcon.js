@@ -1,5 +1,3 @@
-import React from 'react'
-
 function cartIcon() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="yellow" class="bi bi-cart" viewBox="0 0 16 16">

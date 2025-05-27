@@ -8,6 +8,9 @@ background-color: #df7500;
     position: fixed;
     top: 25%;
     width: 50%;
+    @media screen and (max-width: 500px) {
+      width: 100%;
+    }
 }
 
 #order-confirmation-button{

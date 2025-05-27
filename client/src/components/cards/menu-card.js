@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import './menuCard.css';
 
@@ -26,12 +25,6 @@ function MenuCard(props) {
 
       console.log("Adding item with ID:", props.id);
       window.location.reload();
-    // axios.post(`${process.env.REACT_APP_BACKEND_URL}/addToCart`, { name: props.name, price: props.price })
-    //   .then(res => {
-    //     console.log(res);
-    //     window.location.reload();
-    //   })
-    //   .catch(err => console.log(err));
   }
 
   return (
