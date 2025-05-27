@@ -115,6 +115,7 @@
     height: 50%;
     width: 6rem;
     margin-top: 50%;
+    padding-top: 0.5rem;
 }
 
 #address-field{
