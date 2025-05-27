@@ -24,7 +24,7 @@ function App() {
       <div id='heading-section'>
         <img src="/tastes-from-srilanka-logo.jpg" alt="tastes-from-srilanka-logo" width={200} height={200}/>
         <div id='cart-btn-holder'>
-          <button id='cart-btn' onClick={() => setCartOpen(!cartOpen)}>{cartOpen ? <XIcon /> : <CartIcon />} <span>Cart</span>({cartCount})</button>
+          <button id='cart-btn' onClick={() => setCartOpen(!cartOpen)}>{cartOpen ? <XIcon /> : <CartIcon />} <span>Cart</span><span>({cartCount})</span></button>
         </div>
       </div>
       {cartOpen ? <></> :
