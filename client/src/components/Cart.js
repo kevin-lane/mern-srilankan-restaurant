@@ -126,19 +126,20 @@ function Cart( {setCartCount} ) {
           {uniqueCartItems.map((item) => {
             console.log(item);
 
-            return (
-            <li className='cart-list-item'>
-              <div id='content-wrapper'></div>
-              <div id='content-wrapper'>
-                <p id='cart-item-name'>{item.name}</p>
-                <p id='cart-item-price'>{nameCounts[item.name] * item.price}kr</p>
-              </div>
-              <div id='button-wrapper'>
-                <button id='remove-btn' onClick={() => deleteItem(item)}>-</button>
-                <span id='name-count-container'>{nameCounts[item.name]}</span>
-                <button id='remove-btn' onClick={() => addItem(item)}>+</button>
-              </div>
-            </li>)
+            {nameCounts[item.name] < 1 ? <></> :
+              <li className='cart-list-item'>
+                <div id='content-wrapper'></div>
+                <div id='content-wrapper'>
+                  <p id='cart-item-name'>{item.name}</p>
+                  <p id='cart-item-price'>{nameCounts[item.name] * item.price}kr</p>
+                </div>
+                <div id='button-wrapper'>
+                  <button id='remove-btn' onClick={() => deleteItem(item)}>-</button>
+                  <span id='name-count-container'>{nameCounts[item.name]}</span>
+                  <button id='remove-btn' onClick={() => addItem(item)}>+</button>
+                </div>
+              </li>
+            }
           })}
         </ul>
         <p id='total-price'>Total: {totalPrice}kr</p>
