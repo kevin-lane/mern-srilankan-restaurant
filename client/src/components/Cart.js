@@ -104,6 +104,7 @@ function Cart( {setCartCount} ) {
     console.log(nameCounts);
 
     const index = updatedCart.findIndex(item => item.name === cartItem.name);
+    console.log("Index: " + index);
 
     if(index > -1){
       updatedCart.splice(index, 1);
