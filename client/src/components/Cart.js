@@ -107,6 +107,10 @@ function Cart( {setCartCount} ) {
     console.log("Index: " + index);
     console.log(uniqueItems);
 
+    if(nameCounts[cartItem.name] === 0){
+      console.log(cartItem.name + " has been removed");
+
+    }
 
     if(index > -1){
       updatedCart.splice(index, 1);
