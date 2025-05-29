@@ -156,6 +156,7 @@ function Cart( {setCartCount} ) {
         </ul>
         <p id='total-price'>Total: {totalPrice}kr</p>
 
+        <hr />
         <p>Please fill in your details below to complete the order</p>
           <form id='cart-form'>
               <label className='input-labels' for="firstName">First Name</label>
