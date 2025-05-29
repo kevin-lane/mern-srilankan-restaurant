@@ -125,9 +125,7 @@ function Cart( {setCartCount} ) {
         <ul id='cart-list'>
           {uniqueCartItems.map((item) => {
             console.log(item);
-
-            {nameCounts[item.name] > 0 &&
-            // return(
+            return(
               <li className='cart-list-item'>
                 <div id='content-wrapper'></div>
                 <div id='content-wrapper'>
@@ -140,8 +138,7 @@ function Cart( {setCartCount} ) {
                   <button id='remove-btn' onClick={() => addItem(item)}>+</button>
                 </div>
               </li>
-            // )
-            }
+            )
           })}
         </ul>
         <p id='total-price'>Total: {totalPrice}kr</p>
