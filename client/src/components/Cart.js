@@ -130,9 +130,9 @@ function Cart( {setCartCount} ) {
 
   return (
     <div id='cart'>
-      {cartItems.length === 0 ? <p>{cartText}</p> :
+      {cartItems.length === 0 ? <h2>{cartText}</h2> :
       <>
-        <p>Your cart items: </p>
+        <h2>Your cart items: </h2>
         <ul id='cart-list'>
           {uniqueCartItems
           .filter(item => nameCounts[item.name] > 0)
@@ -157,6 +157,7 @@ function Cart( {setCartCount} ) {
         <p id='total-price'>Total cost: <span style={{ color: '#941E32' }}>{totalPrice}:-</span></p>
 
         <hr id='cart-line-seperator'/>
+        <h2>Checkout</h2>
         <p>Please fill in your details below to complete the order</p>
           <form id='cart-form'>
               <label className='input-labels' for="firstName">First Name</label>
