@@ -154,7 +154,7 @@ function Cart( {setCartCount} ) {
             )
           })}
         </ul>
-        <p id='total-price'>Total: {totalPrice}kr</p>
+        <p id='total-price'>Total cost: <span style={{ color: '#941E32' }}>{totalPrice}:-</span></p>
 
         <hr id='cart-line-seperator'/>
         <p>Please fill in your details below to complete the order</p>
