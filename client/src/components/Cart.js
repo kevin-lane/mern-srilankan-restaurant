@@ -109,7 +109,7 @@ function Cart( {setCartCount} ) {
     if(index > -1){
       updatedCart.splice(index, 1);
     }
-    else if(index === 0){
+    else {
       console.log(uniqueCartItems);
 
     }
