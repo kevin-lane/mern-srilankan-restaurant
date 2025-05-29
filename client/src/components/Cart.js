@@ -110,7 +110,7 @@ function Cart( {setCartCount} ) {
       updatedCart.splice(index, 1);
     }
     else {
-      console.log(uniqueCartItems);
+      console.log("UniqueCartItems when index 0: " + uniqueCartItems);
 
     }
 
