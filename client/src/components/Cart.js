@@ -134,14 +134,16 @@ function Cart( {setCartCount} ) {
       <>
         <p>Your cart items: </p>
         <ul id='cart-list'>
-          {uniqueCartItems.map((item) => {
+          {uniqueCartItems
+          .filter(item => nameCounts[item.name] > 0)
+          .map((item) => {
             console.log(item);
             return(
               <li className='cart-list-item'>
                 <div id='content-wrapper'></div>
                 <div id='content-wrapper'>
                   <p id='cart-item-name'>{item.name}</p>
-                  <p id='cart-item-price'>{nameCounts[item.name] * item.price}kr</p>
+                  <p id='cart-item-price'>{nameCounts[item.name] ? nameCounts[item.name] * item.price : 0}kr</p>
                 </div>
                 <div id='button-wrapper'>
                   <button id='remove-btn' onClick={() => deleteItem(item)}>-</button>
