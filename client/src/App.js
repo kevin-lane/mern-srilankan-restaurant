@@ -38,13 +38,16 @@ function App() {
       <div id='menu-selection'>
         {cartOpen ? <Cart setCartCount={setCartCount}/> : <MenuList /> }
       </div>
-      <address id='address-field'>
-        <p>Visiting Address:</p>
-        <p>Tastes from Sri Lanka</p>
-        <p>Orientalvägen 23</p>
-        <p>112 24 Stockholm</p>
-        <p>Telephone Number: +46 73 123 45 67</p>
-      </address>
+
+      <footer>
+        <address id='address-field'>
+          <p>Visiting Address:</p>
+          <p>Tastes from Sri Lanka</p>
+          <p>Orientalvägen 23</p>
+          <p>112 24 Stockholm</p>
+          <p>Telephone Number: +46 73 123 45 67</p>
+        </address>
+      </footer>
     </div>
   );
 }
