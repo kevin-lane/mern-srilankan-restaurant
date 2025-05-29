@@ -105,7 +105,7 @@ function Cart( {setCartCount} ) {
 
     const index = updatedCart.findIndex(item => item.name === cartItem.name);
     console.log("Index: " + index);
-    console.log("Unique cart items change when delete:" + uniqueItems);
+    console.log(uniqueItems);
 
 
     if(index > -1){
