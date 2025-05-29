@@ -54,6 +54,11 @@
   font-size: x-large;
 }
 
+#cart-line-seperator{
+    width: 75%;
+    margin-bottom: 3rem;
+}
+
 /* Form section */
 #cart-form{
   display: grid;
