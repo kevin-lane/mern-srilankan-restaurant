@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import './cart.css';
 import OrderConfirmation from './modals/OrderConfirmation';
-import cartIconX from './icons/cartIconX';
+import CartIconX from './icons/cartIconX';
 
 function Cart( {setCartCount} ) {
   const [cartItems, setCartItems] = useState([]);
@@ -88,7 +88,7 @@ function Cart( {setCartCount} ) {
 
   return (
     <div id='cart'>
-      {cartItems.length === 0 ? <><h2>{cartText}</h2><p><cartIconX /></p></> :
+      {cartItems.length === 0 ? <><h2>{cartText}</h2><p><CartIconX /></p></> :
       <>
         <h2>Your cart items: </h2>
         <ul id='cart-list'>
