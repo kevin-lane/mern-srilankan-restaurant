@@ -40,7 +40,6 @@ function App() {
       </div>
 
     <div id='footer'>
-      <footer>
         <address id='address-field'>
           <p>Visiting Address</p>
           <p>Tastes from Sri Lanka</p>
@@ -53,7 +52,6 @@ function App() {
           <p>Monday - Friday: 8:00 - 21:00</p>
           <p>Saturday - Sunday: 10:00 - 18:00</p>
         </div>
-      </footer>
     </div>
 
     </div>
