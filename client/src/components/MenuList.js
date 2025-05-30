@@ -22,5 +22,4 @@ function MenuList() {
     </div>
   )
 }
-
-export default MenuList
+export default MenuList;

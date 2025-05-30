@@ -111,6 +111,7 @@ function Cart( {setCartCount} ) {
             )
           })}
         </ul>
+
         <p id='total-price'>Total cost: <span style={{ color: '#941E32' }}>{totalPrice}:-</span></p>
 
         <hr id='cart-line-seperator'/>
@@ -142,5 +143,4 @@ function Cart( {setCartCount} ) {
     </div>
   )
 }
-
-export default Cart
+export default Cart;

@@ -6,5 +6,4 @@ function cartIconX() {
     </svg>
   )
 }
-
-export default cartIconX
+export default cartIconX;
