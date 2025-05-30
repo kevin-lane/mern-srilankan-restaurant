@@ -39,8 +39,8 @@ function App() {
         {cartOpen ? <Cart setCartCount={setCartCount}/> : <MenuList /> }
       </div>
 
-<div>
-        <footer id='footer'>
+    <div id='footer'>
+      <footer>
         <address id='address-field'>
           <p>Visiting Address</p>
           <p>Tastes from Sri Lanka</p>
@@ -54,7 +54,7 @@ function App() {
           <p>Saturday - Sunday: 10:00 - 18:00</p>
         </div>
       </footer>
-</div>
+    </div>
 
     </div>
   );
