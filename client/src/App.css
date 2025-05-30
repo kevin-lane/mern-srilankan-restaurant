@@ -47,8 +47,8 @@
 #banners{
   display: flex;
   @media screen and (max-width: 1024px){
-    display: block;
-    margin-top: 0;
+    /* display: flex; */
+    flex-direction: column;
   }
 }
 
