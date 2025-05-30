@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { use, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './cart.css';
 import OrderConfirmation from './modals/OrderConfirmation';
 
@@ -16,46 +16,30 @@ function Cart( {setCartCount} ) {
   const [email, setEmail] = useState("");
   const [cartText, setCartText] = useState("Cart is empty");
   const [orderSubmitted, setOrderSubmitted] = useState(false);
-  const [nameCount, setNameCount] = useState(0);
   const nameSet = new Set();
   const uniqueItems = [];
 
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem("cart") || "[]")
-    console.log("CartItems (useEffect)" + cartItems);
-
     storedCart.forEach((item) => {
       if(!nameSet.has(item.name)){
         nameSet.add(item.name);
         uniqueItems.push(item);
       }
     });
-
-    console.log("NameSet:", nameSet); // This will now show expected values
-  console.log("UniqueItems:", uniqueItems);
-  console.log("StoredCart: ", storedCart);
-
     setUniqueCartItems(uniqueItems);
     setCartItems(storedCart);
   }, [])
 
   let totalPrice = cartItems.reduce((prev, {price}) => prev + price, 0)
   let items = cartItems.map(i => i.name);
-  console.log("CartItems " + cartItems);
-  console.log("Unique Items " + uniqueCartItems);
 
-  console.log(nameSet);
-
-    //Count amount of certain item
+  //Count amount of certain item
   const nameCounts = {};
   cartItems.forEach(item => {
     nameCounts[item.name] = (nameCounts[item.name] || 0) + 1;
     console.log(nameCounts[item.name]);
   });
-  console.log(nameCounts);
-
-  console.log(cartItems.length);
-
 
   function submitOrder(){
     alert("Thank you for your order")
@@ -86,10 +70,6 @@ function Cart( {setCartCount} ) {
   function addItem(cartItem){
     const updatedCart =[...cartItems, cartItem]
     nameCounts[cartItem.name]++;
-    console.log(cartItem.name)
-    console.log(nameCounts[cartItem.name]);
-
-    console.log(nameCounts);
     setCartItems(updatedCart);
     localStorage.setItem("cart", JSON.stringify(updatedCart));
     setCartCount(updatedCart.length);
@@ -97,35 +77,14 @@ function Cart( {setCartCount} ) {
 
   function deleteItem(cartItem){
     const updatedCart = [...cartItems];
-    console.log(cartItems);
     nameCounts[cartItem.name]--;
-        console.log(cartItem.name)
-    console.log(nameCounts[cartItem.name]);
-    console.log(nameCounts);
-
     const index = updatedCart.findIndex(item => item.name === cartItem.name);
-    console.log("Index: " + index);
-    console.log(uniqueItems);
-
-    if(nameCounts[cartItem.name] === 0){
-      console.log(cartItem.name + " has been removed");
-
-    }
-
     if(index > -1){
       updatedCart.splice(index, 1);
     }
-    else {
-      console.log("UniqueCartItems when index 0: " + uniqueCartItems);
-
-    }
-
-    console.log(updatedCart);
     setCartItems(updatedCart);
     localStorage.setItem("cart", JSON.stringify(updatedCart));
     setCartCount(updatedCart.length); //Update cartCount in ui
-    console.log(JSON.parse(localStorage.getItem("cart")  || "[]").length);
-
   }
 
   return (

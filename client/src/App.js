@@ -39,7 +39,7 @@ function App() {
         {cartOpen ? <Cart setCartCount={setCartCount}/> : <MenuList /> }
       </div>
 
-    <div id='footer'>
+      <div id='footer'>
         <address id='address-field'>
           <strong>Visiting Address</strong>
           <p>Tastes from Sri Lanka</p>
@@ -52,11 +52,10 @@ function App() {
           <p>Monday - Friday: 8:00 - 21:00</p>
           <p>Saturday - Sunday: 10:00 - 18:00</p>
         </div>
-    </div>
-    <div id='copyright-banner'>
-      <p>&copy; Kevin Lane</p>
-    </div>
-
+      </div>
+      <div id='copyright-banner'>
+        <p>&copy; Kevin Lane</p>
+      </div>
     </div>
   );
 }

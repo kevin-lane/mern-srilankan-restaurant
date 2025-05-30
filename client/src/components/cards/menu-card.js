@@ -13,18 +13,11 @@ function MenuCard(props) {
 
   function addItem(){
     alert(props.name + " has been added to the cart ");
-
     const newItem = { key: props.id, name: props.name, price: props.price };
     const updatedCart = [...cartItems, newItem];
-
-      setCartItems(updatedCart);
-      localStorage.setItem("cart", JSON.stringify(updatedCart));
-
-      console.log(updatedCart);
-      console.log(localStorage.getItem("cart"));
-
-      console.log("Adding item with ID:", props.id);
-      window.location.reload();
+    setCartItems(updatedCart);
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
+    window.location.reload();
   }
 
   return (
@@ -37,4 +30,4 @@ function MenuCard(props) {
   )
 }
 
-export default MenuCard
+export default MenuCard;

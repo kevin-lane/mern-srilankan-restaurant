@@ -1,4 +1,3 @@
-import React from 'react';
 import './orderConfirmation.css';
 import CheckIcon from '../icons/checkIcon';
 
