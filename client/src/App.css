@@ -129,11 +129,13 @@
 
 /* Footer */
 #footer{
-  background-color: #941e32;
-  color: #fff;
-  display: flex;
-  margin-top: 20rem;
-  width: 100%;
+background-color: #941e32;
+    color: #fff;
+    display: flex;
+    margin-top: 20rem;
+    width: 100%;
+    align-items: baseline;
+    justify-content: space-evenly;
 }
 
 #address-field{
