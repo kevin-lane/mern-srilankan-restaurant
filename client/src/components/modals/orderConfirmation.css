@@ -12,6 +12,9 @@ background-color: #df7500;
       width: 100%;
       left: 0;
     }
+    @media screen and (max-height: 500px) {
+      height: 50%;
+    }
 }
 
 #order-confirmation-button{
