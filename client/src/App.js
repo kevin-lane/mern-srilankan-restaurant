@@ -41,14 +41,14 @@ function App() {
 
     <div id='footer'>
         <address id='address-field'>
-          <p>Visiting Address</p>
+          <strong>Visiting Address</strong>
           <p>Tastes from Sri Lanka</p>
           <p>Orientalvägen 23</p>
           <p>112 24 Stockholm</p>
           <p>Telephone Number: +46 73 123 45 67</p>
         </address>
         <div>
-          <p>Opening Hours</p>
+          <strong>Opening Hours</strong>
           <p>Monday - Friday: 8:00 - 21:00</p>
           <p>Saturday - Sunday: 10:00 - 18:00</p>
         </div>
