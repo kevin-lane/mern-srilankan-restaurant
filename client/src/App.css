@@ -105,6 +105,7 @@
   font-family: sans-serif;
   background-color: #941e32;
   opacity: 0.85;
+  box-shadow: 6px 6px 5px #df7500;
 }
 
 #cart-btn{
@@ -118,6 +119,7 @@
     width: 6rem;
     margin-top: 50%;
     padding-top: 0.5rem;
+    box-shadow: 7px 7px 5px #941e32;
 }
 
 #cart-count{
