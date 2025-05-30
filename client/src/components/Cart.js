@@ -38,7 +38,6 @@ function Cart( {setCartCount} ) {
   const nameCounts = {};
   cartItems.forEach(item => {
     nameCounts[item.name] = (nameCounts[item.name] || 0) + 1;
-    console.log(nameCounts[item.name]);
   });
 
   function submitOrder(){
@@ -95,7 +94,6 @@ function Cart( {setCartCount} ) {
           {uniqueCartItems
           .filter(item => nameCounts[item.name] > 0)
           .map((item) => {
-            console.log(item);
             return(
               <li className='cart-list-item'>
                 <div id='content-wrapper'></div>
