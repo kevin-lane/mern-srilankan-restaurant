@@ -10,10 +10,12 @@
 }
 
 .cart-list-item{
+  border: 2px solid #df7500;
+  border-radius: 1rem;
   display: grid;
   margin: 1rem;
   padding: 1rem;
-  border: 1px dashed green;
+  font-family: sans-serif;
 }
 
 #content-wrapper{
@@ -30,11 +32,11 @@
 
 #button-wrapper{
   float: right;
+  border: 1px solid green;
+  border-radius: 1rem;
 }
 
 #name-count-container{
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 6px;
@@ -42,11 +44,12 @@
 }
 
 #remove-btn{
-  background-color: white;
-  border: 1px solid black;
-  color: green;
-  font-size: x-large;
-  width: 50px;
+    background-color: #fff;
+    border: 1px solid green;
+    border-radius: 1rem;
+    color: green;
+    font-size: x-large;
+    width: 35%;
 }
 
 #total-price{
