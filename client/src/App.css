@@ -144,13 +144,13 @@
 #address-field{
   margin: 4rem;
   text-align: left;
-    @media screen and (min-width: 619px) {
+    @media screen and (max-width: 619px) {
       text-align: center;
   }
 }
 #opening-hours{
   text-align: right;
-    @media screen and (min-width: 619px) {
+    @media screen and (max-width: 619px) {
       text-align: center;
   }
 }
