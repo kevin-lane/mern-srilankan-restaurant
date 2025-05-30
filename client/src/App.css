@@ -140,4 +140,8 @@ background-color: #941e32;
 
 #address-field{
   margin: 4rem;
+  text-align: left;
+}
+#opening-hours{
+  text-align: right;
 }
