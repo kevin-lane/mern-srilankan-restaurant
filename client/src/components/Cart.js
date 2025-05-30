@@ -42,7 +42,6 @@ function Cart( {setCartCount} ) {
   });
 
   function submitOrder(){
-    alert("Thank you for your order")
     setOrderedItems(items);
     setCartText("Thank you for your order!");
     //Post order to orders collection
