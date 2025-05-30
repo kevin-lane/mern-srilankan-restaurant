@@ -129,25 +129,34 @@
 
 /* Footer */
 #footer{
-background-color: #941e32;
-    color: #fff;
-    display: flex;
-    margin-top: 20rem;
-    width: 100%;
-    align-items: baseline;
-    justify-content: space-evenly;
+  background-color: #941e32;
+  color: #fff;
+  display: flex;
+  margin-top: 20rem;
+  width: 100%;
+  align-items: baseline;
+  justify-content: space-evenly;
+  @media screen and (min-width: 619px) {
+    display: block;
+  }
 }
 
 #address-field{
   margin: 4rem;
   text-align: left;
+    @media screen and (min-width: 619px) {
+      text-align: center;
+  }
 }
 #opening-hours{
   text-align: right;
+    @media screen and (min-width: 619px) {
+      text-align: center;
+  }
 }
 
 #copyright-banner{
   background-color: #941e32;
-    color: white;
-    padding: 1px;
+  color: white;
+  padding: 1px;
 }
