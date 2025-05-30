@@ -54,7 +54,7 @@ function App() {
         </div>
     </div>
     <div id='copyright-banner'>
-      <p>&copy;Kevin Lane {document.createTextNode(new Date().getFullYear())}</p>
+      <p>&copy;Kevin Lane</p>
     </div>
 
     </div>
