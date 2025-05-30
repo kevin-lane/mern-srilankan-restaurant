@@ -53,6 +53,9 @@ function App() {
           <p>Saturday - Sunday: 10:00 - 18:00</p>
         </div>
     </div>
+    <div id='copyright-banner'>
+      <p>&copy;Kevin Lane {document.createTextNode(new Date().getFullYear())}</p>
+    </div>
 
     </div>
   );
