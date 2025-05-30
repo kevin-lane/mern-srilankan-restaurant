@@ -4,6 +4,9 @@
   margin-right: auto;
   padding: 2rem;
   width: 20%;
+  @media (width < 1300px) {
+    width: 30%;
+  }
   @media (width < 750px) {
     width: 70%;
   }
