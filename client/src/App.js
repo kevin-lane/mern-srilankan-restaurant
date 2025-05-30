@@ -43,9 +43,9 @@ function App() {
         <address id='address-field'>
           <strong>Visiting Address</strong>
           <p>Tastes from Sri Lanka</p>
-          <p>Orientalvägen 23</p>
+          <p>Fantasivägen 94</p>
           <p>112 24 Stockholm</p>
-          <p>Telephone Number: +46 73 123 45 67</p>
+          <p>Telephone Number: +46 70 123 45 67</p>
         </address>
         <div id='opening-hours'>
           <strong>Opening Hours</strong>
