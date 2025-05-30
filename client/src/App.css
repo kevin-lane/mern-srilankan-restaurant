@@ -145,3 +145,9 @@ background-color: #941e32;
 #opening-hours{
   text-align: right;
 }
+
+#copyright-banner{
+  background-color: #941e32;
+    color: white;
+    padding: 1px;
+}

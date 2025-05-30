@@ -54,7 +54,7 @@ function App() {
         </div>
     </div>
     <div id='copyright-banner'>
-      <p>&copy;Kevin Lane</p>
+      <p>&copy; Kevin Lane</p>
     </div>
 
     </div>
